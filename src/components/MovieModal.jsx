@@ -17,6 +17,9 @@ export default function MovieModal({ show, onClose }) {
     <Poster src={show.image?.original || show.image?.medium} name={show.name} className="modal-poster" />
     <h2 id="modal-title">{show.name}</h2>
     <p><strong>Rating:</strong> {show.rating?.average ?? 'Not rated'} · <strong>Release:</strong> {show.premiered || 'Unknown'}</p>
+    <p><strong>Genres:</strong> {show.genres?.join(', ') || 'Not listed'}</p>
+    <p><strong>Language:</strong> {show.language || 'Unknown'} · <strong>Status:</strong> {show.status || 'Unknown'}</p>
+    <p><strong>Network:</strong> {show.network?.name || show.webChannel?.name || 'Not listed'}</p>
     <h3>Overview</h3>
     <p className="summary">{summaryText(show.summary)}</p>
     <button onClick={onClose}>Close</button>
