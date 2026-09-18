@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #252525; background: #f4f4f4; }
+a { color: #225ca0; }
+button, input { font: inherit; }
+button, .button { cursor: pointer; }
+.container { width: 90%; max-width: 1100px; margin: auto; }
