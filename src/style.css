@@ -35,3 +35,9 @@ main { flex: 1; }
 .card-info h2 { font-size: 18px; margin: 0 0 12px; overflow-wrap: anywhere; }
 .card-info p { font-size: 14px; color: #705007; }
 .card-info span { color: #555; }
+
+.search-box { margin: 24px 0; padding: 18px; background: white; border: 1px solid #ccc; }
+.search-box label { display: block; font-weight: bold; margin-bottom: 10px; }
+.search-row { display: flex; gap: 10px; }
+.search-row input { width: 100%; min-width: 0; border: 1px solid #999; padding: 12px; border-radius: 2px; }
+.secondary { color: #333; background: #eee; border-color: #aaa; }
