@@ -24,3 +24,6 @@ main { flex: 1; }
 .button, button { display: inline-block; background: #2866a3; border: 1px solid #20568a; color: white; padding: 10px 18px; border-radius: 3px; text-decoration: none; }
 .hero .button { background: #f2c14e; border-color: #f2c14e; color: #242424; }
 .home-info { padding: 20px 0; line-height: 1.7; }
+
+.listing { padding-top: 24px; }
+.listing h1 { font-size: 28px; margin-bottom: 8px; }
