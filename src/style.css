@@ -41,3 +41,5 @@ main { flex: 1; }
 .search-row { display: flex; gap: 10px; }
 .search-row input { width: 100%; min-width: 0; border: 1px solid #999; padding: 12px; border-radius: 2px; }
 .secondary { color: #333; background: #eee; border-color: #aaa; }
+
+.notice { padding: 24px; text-align: center; background: white; border: 1px solid #ccc; }
