@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getShows } from '../api';
 import MovieCard from '../components/MovieCard';
 import SearchBar from '../components/SearchBar';
+import MovieModal from '../components/MovieModal';
 
 export default function Movies() {
   const [error, setError] = useState('');
@@ -29,6 +30,6 @@ export default function Movies() {
     {!loading && error && <div className="notice" role="alert"><p>{error}</p><button onClick={() => setRetry(retry + 1)}>Try again</button></div>}
     {!loading && !error && <p role="status">{shows.length ? shows.length + " shows found" : "No shows found. Try another title."}</p>}
     {!loading && !error && <div className="movie-grid">{shows.map(show => <MovieCard key={show.id} show={show} onDetails={setSelected} />)}</div>}
-    {selected && <p>{selected.name}</p>}
+    {selected && <MovieModal show={selected} onClose={() => setSelected(null)} />}
   </div>;
 }
