@@ -43,3 +43,5 @@ main { flex: 1; }
 .secondary { color: #333; background: #eee; border-color: #aaa; }
 
 .notice { padding: 24px; text-align: center; background: white; border: 1px solid #ccc; }
+
+.missing-poster { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: #555; }

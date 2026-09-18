@@ -1,7 +1,8 @@
 import React from 'react';
+import Poster from './Poster';
 export default function MovieCard({ show, onDetails }) {
   return <article className="movie-card">
-    <img className="poster" src={show.image?.medium} alt={show.name + ' poster'} loading="lazy" />
+    <Poster src={show.image?.medium} name={show.name} />
     <div className="card-info">
       <h2>{show.name}</h2>
       <p>★ {show.rating?.average ?? 'Not rated'} <span> · {show.premiered?.slice(0, 4) || 'Year unknown'}</span></p>
