@@ -27,3 +27,11 @@ main { flex: 1; }
 
 .listing { padding-top: 24px; }
 .listing h1 { font-size: 28px; margin-bottom: 8px; }
+
+.movie-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.movie-card { background: white; border: 1px solid #ccc; border-radius: 3px; overflow: hidden; }
+.poster { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: #ddd; }
+.card-info { padding: 14px; }
+.card-info h2 { font-size: 18px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.card-info p { font-size: 14px; color: #705007; }
+.card-info span { color: #555; }
