@@ -10,9 +10,22 @@ function summaryText(summary) {
 export default function MovieModal({ show, onClose }) {
   const dialog = useRef(null);
   useEffect(() => {
-    dialog.current.showModal();
+    const element = dialog.current;
+    const previousFocus = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    element.showModal();
+    document.body.style.overflow = 'hidden';
+    return () => {
+      element.close();
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
+    };
   }, []);
-  return <dialog ref={dialog} className="movie-modal" aria-labelledby="modal-title" onCancel={onClose}>
+  return <dialog ref={dialog} className="movie-modal" aria-labelledby="modal-title" onCancel={onClose} onClick={event => {
+    if (event.target !== event.currentTarget) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) onClose();
+  }}>
     <button className="close-icon secondary" aria-label="Close details" onClick={onClose}>×</button>
     <Poster src={show.image?.original || show.image?.medium} name={show.name} className="modal-poster" />
     <h2 id="modal-title">{show.name}</h2>
