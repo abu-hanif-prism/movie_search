@@ -27,6 +27,7 @@ export default function Movies() {
     <SearchBar query={query} onChange={setQuery} />
     {loading && <p role="status" className="notice">Loading shows...</p>}
     {!loading && error && <div className="notice" role="alert"><p>{error}</p><button onClick={() => setRetry(retry + 1)}>Try again</button></div>}
+    {!loading && !error && <p role="status">{shows.length ? shows.length + " shows found" : "No shows found. Try another title."}</p>}
     {!loading && !error && <div className="movie-grid">{shows.map(show => <MovieCard key={show.id} show={show} onDetails={setSelected} />)}</div>}
     {selected && <p>{selected.name}</p>}
   </div>;
