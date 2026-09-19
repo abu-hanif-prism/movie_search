@@ -14,5 +14,5 @@ export default function App() {
     window.addEventListener('hashchange', changePage);
     return () => window.removeEventListener('hashchange', changePage);
   }, []);
-  return <div className="app"><Navbar page={page} /><main>{page === 'movies' ? <Movies /> : <Home />}</main><Footer /></div>;
+  return <div className="app"><a className="skip-link" href="#main-content" onClick={event => { event.preventDefault(); document.getElementById("main-content").focus(); }}>Skip to content</a><Navbar page={page} /><main id="main-content" tabIndex={-1}>{page === 'movies' ? <Movies /> : <Home />}</main><Footer /></div>;
 }

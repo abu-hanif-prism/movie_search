@@ -73,3 +73,14 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   .modal-poster { height: 250px; }
   .pagination { gap: 10px; }
 }
+
+button:hover:not(:disabled), .button:hover { filter: brightness(.93); }
+a:hover { text-decoration: underline; }
+button, .button, nav a { min-height: 44px; }
+nav a { display: inline-flex; align-items: center; }
+:focus-visible { outline: 3px solid #be7000; outline-offset: 3px; }
+.movie-card { display: flex; flex-direction: column; }
+.card-info { display: flex; flex: 1; flex-direction: column; align-items: flex-start; }
+.card-info button { margin-top: auto; }
+.skip-link { position: absolute; left: 10px; top: -100px; padding: 12px; background: white; z-index: 2; }
+.skip-link:focus { top: 10px; }
