@@ -13,6 +13,8 @@ npm run dev
 
 Open the local URL printed by Vite. Build with `npm run build`; check the build with `npm run preview`.
 
+Run `npm test` for request handling checks (search encoding, paging, API errors and cancellation).
+
 ## Features
 
 - Home page with navigation, hero and footer
