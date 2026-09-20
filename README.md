@@ -2,6 +2,8 @@
 
 A small React app for browsing shows and checking their details. The design uses plain CSS, a blue header and a basic card grid.
 
+**Live demo:** [movie-alpha-sandy.vercel.app](https://movie-alpha-sandy.vercel.app)
+
 ## Run locally
 
 Use Node.js 22.12+ (or 20.19+).
